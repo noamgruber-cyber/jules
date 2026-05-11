@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Chart Analysis - Technical Indicators</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Stock Chart Mastery</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="patterns.html">Chart Patterns</a></li>
+                <li><a href="indicators.html" class="active">Technical Indicators</a></li>
+            </ul>
+            <div class="burger" id="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Technical Indicators</h1>
+            <p>Understand the mathematical calculations based on price and volume that help forecast market direction.</p>
+        </section>
+
+        <section class="content">
+            <h2>What are Technical Indicators?</h2>
+            <p>Technical indicators are heuristic or mathematical calculations based on the price, volume, or open interest of a security or contract used by traders who follow technical analysis. By analyzing historical data, technical analysts use indicators to predict future price movements.</p>
+
+            <div class="indicator-container">
+                <div class="indicator-card">
+                    <h3>Moving Averages (MA)</h3>
+                    <p>Moving averages smooth out price data by creating a constantly updated average price over a specific period. They help identify trend direction and determine support and resistance levels.</p>
+                    <ul>
+                        <li><strong>Simple Moving Average (SMA):</strong> Calculates the average price over a set number of periods.</li>
+                        <li><strong>Exponential Moving Average (EMA):</strong> Gives more weight to recent prices, making it more responsive to new information.</li>
+                    </ul>
+                </div>
+
+                <div class="indicator-card">
+                    <h3>Relative Strength Index (RSI)</h3>
+                    <p>The RSI is a momentum oscillator that measures the speed and change of price movements. It oscillates between zero and 100.</p>
+                    <p>Typically, an RSI above 70 indicates that an asset may be overbought (potentially due for a pullback), while an RSI below 30 indicates it may be oversold (potentially due for a bounce).</p>
+                </div>
+
+                <div class="indicator-card">
+                    <h3>Moving Average Convergence Divergence (MACD)</h3>
+                    <p>The MACD is a trend-following momentum indicator that shows the relationship between two moving averages of a security's price (usually the 12-period EMA and the 26-period EMA).</p>
+                    <p>Traders look for signal line crossovers, centerline crossovers, and divergences to generate buy and sell signals.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Stock Chart Mastery. For educational purposes only.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Chart Analysis - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Stock Chart Mastery</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="patterns.html">Chart Patterns</a></li>
+                <li><a href="indicators.html">Technical Indicators</a></li>
+            </ul>
+            <div class="burger" id="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Learn to Read Stock Charts</h1>
+            <p>Your guide to mastering technical analysis and understanding market movements.</p>
+        </section>
+
+        <section class="content">
+            <h2>What is a Stock Chart?</h2>
+            <p>A stock chart is a graphical representation of a stock's price movements over a specific period. It is the primary tool used in technical analysis to identify trends, patterns, and potential future price actions.</p>
+
+            <h2>Types of Stock Charts</h2>
+
+            <div class="card-container">
+                <div class="card">
+                    <h3>Line Chart</h3>
+                    <p>The simplest form of a stock chart. It connects the closing prices of a stock over a given time frame with a continuous line. It's useful for viewing overall trends but lacks detailed price information like open, high, and low prices.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Bar Chart (OHLC)</h3>
+                    <p>A bar chart displays the Open, High, Low, and Close (OHLC) prices for each period. The top of the vertical line represents the highest price, and the bottom represents the lowest price. The horizontal lines indicate the opening and closing prices.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Candlestick Chart</h3>
+                    <p>The most popular type of chart among traders. Like a bar chart, it shows OHLC prices. The thick part of the candlestick, called the "body," represents the range between the open and close. The thin lines above and below the body, called "wicks" or "shadows," represent the high and low. Green or white bodies indicate a bullish period (close > open), while red or black bodies indicate a bearish period (close < open).</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Stock Chart Mastery. For educational purposes only.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
