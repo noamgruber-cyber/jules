@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Chart Analysis - Risk Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Stock Chart Mastery</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="patterns.html">Patterns</a></li>
+                <li><a href="indicators.html">Indicators</a></li>
+                <li><a href="advanced.html">Advanced</a></li>
+                <li><a href="risk-management.html" class="active">Risk Management</a></li>
+                <li><a href="psychology.html">Psychology</a></li>
+                <li><a href="glossary.html">Glossary</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><button id="theme-toggle" class="theme-btn">🌓</button></li>
+            </ul>
+            <div class="burger" id="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Risk Management</h1>
+            <p>Technical analysis is useless without math-based protection. Learn to protect your capital.</p>
+        </section>
+
+        <section class="content">
+            <h2>The Mathematics of Trading</h2>
+            <p>Risk management is the most critical component of a trader's longevity. While charting helps identify opportunities, risk management ensures you survive long enough to capitalize on them.</p>
+
+            <div class="card-container">
+                <div class="card">
+                    <h3>Risk/Reward Ratio</h3>
+                    <p>The Risk/Reward ratio compares the potential profit of a trade to its potential loss. A minimum ratio of 1:2 means you aim to make $2 for every $1 risked. This ensures that even if you win less than 50% of the time, you can still be profitable.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Expectancy Model</h3>
+                    <p>Expectancy tells you what your average return per trade will be over the long term. A positive expectancy means your system is profitable.</p>
+                    <p class="formula"><strong>E = (Win% &times; Avg Win) - (Loss% &times; Avg Loss)</strong></p>
+                </div>
+            </div>
+
+            <h2>Position Sizing Calculator</h2>
+            <p>Never risk more than 1-2% of your total account equity on a single trade. Use this calculator to determine exactly how many shares to buy based on your predefined risk tolerance and stop-loss level.</p>
+
+            <div class="calculator-container">
+                <div class="form-group">
+                    <label for="account-size">Account Size ($):</label>
+                    <input type="number" id="account-size" placeholder="e.g., 10000" min="0" step="100">
+                </div>
+                <div class="form-group">
+                    <label for="risk-percent">Risk Percentage (%):</label>
+                    <input type="number" id="risk-percent" placeholder="e.g., 1" min="0.1" step="0.1" value="1">
+                </div>
+                <div class="form-group">
+                    <label for="entry-price">Entry Price ($):</label>
+                    <input type="number" id="entry-price" placeholder="e.g., 150" min="0" step="0.01">
+                </div>
+                <div class="form-group">
+                    <label for="stop-loss">Stop Loss Price ($):</label>
+                    <input type="number" id="stop-loss" placeholder="e.g., 145" min="0" step="0.01">
+                </div>
+                <button id="calc-btn" class="btn calc-btn">Calculate Position Size</button>
+
+                <div id="calc-result" class="calc-result" style="display: none;">
+                    <h4>Recommended Position:</h4>
+                    <p>Shares to Buy: <span id="res-shares" class="highlight">0</span></p>
+                    <p>Total Capital Required: $<span id="res-capital">0.00</span></p>
+                    <p>Capital at Risk: $<span id="res-risk" class="highlight-risk">0.00</span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Stock Chart Mastery. For educational purposes only.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
