@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Chart Analysis - Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Stock Chart Mastery</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="patterns.html">Chart Patterns</a></li>
+                <li><a href="indicators.html">Technical Indicators</a></li>
+                <li><a href="advanced.html">Advanced Concepts</a></li>
+                <li><a href="glossary.html">Glossary</a></li>
+                <li><a href="quiz.html" class="active">Quiz</a></li>
+            </ul>
+            <div class="burger" id="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Test Your Knowledge</h1>
+            <p>Take this short quiz to see how much you've learned about stock chart analysis.</p>
+        </section>
+
+        <section class="content quiz-container">
+            <div id="quiz-header">
+                <h2>Technical Analysis Quiz</h2>
+                <p id="quiz-progress">Question 1 of 5</p>
+            </div>
+
+            <div id="quiz-body">
+                <div id="question-container">
+                    <h3 id="question-text">Loading question...</h3>
+                    <div id="options-container" class="options-grid">
+                        <!-- Options will be injected here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="quiz-footer">
+                <button id="submit-btn" class="btn" disabled>Submit Answer</button>
+                <button id="next-btn" class="btn" style="display: none;">Next Question</button>
+            </div>
+
+            <div id="result-container" style="display: none;">
+                <h2>Quiz Complete!</h2>
+                <p id="score-text"></p>
+                <button id="restart-btn" class="btn">Restart Quiz</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Stock Chart Mastery. For educational purposes only.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>
