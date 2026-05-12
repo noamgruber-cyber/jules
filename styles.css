@@ -346,6 +346,41 @@ header {
     border-bottom: none;
 }
 
+/* Simulator Styles */
+.simulator-container {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin: 2rem auto 0;
+    transition: background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sim-controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    align-items: end;
+}
+
+.sim-canvas-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    background: #000;
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+#sim-canvas {
+    display: block;
+    margin: 0 auto;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+}
+
 /* Calculator Styles */
 .calculator-container {
     background: var(--card-bg);
