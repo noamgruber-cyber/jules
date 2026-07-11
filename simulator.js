@@ -33,6 +33,11 @@ const initSimulator = () => {
 
         const simulations = [];
 
+        // Determine min/max for scaling while running simulations
+        // ⚡ Bolt Optimization: Calculate min/max in single pass to avoid O(n^2) nested loop overhead
+        let maxBal = STARTING_BALANCE;
+        let minBal = STARTING_BALANCE;
+
         // Run simulations
         for (let s = 0; s < NUM_SIMULATIONS; s++) {
             let balance = STARTING_BALANCE;
@@ -46,6 +51,10 @@ const initSimulator = () => {
                     balance -= avgLoss;
                 }
                 history.push(balance);
+
+                // Track min and max continuously
+                if(balance > maxBal) maxBal = balance;
+                if(balance < minBal) minBal = balance;
             }
 
             simulations.push(history);
@@ -53,17 +62,6 @@ const initSimulator = () => {
             if (balance > bestEndingBalance) bestEndingBalance = balance;
             if (balance < worstEndingBalance) worstEndingBalance = balance;
         }
-
-        // Determine min/max for scaling
-        let maxBal = STARTING_BALANCE;
-        let minBal = STARTING_BALANCE;
-
-        simulations.forEach(sim => {
-            sim.forEach(val => {
-                if(val > maxBal) maxBal = val;
-                if(val < minBal) minBal = val;
-            });
-        });
 
         // Add padding to scales
         const range = maxBal - minBal;
